@@ -1,4 +1,13 @@
 window.addEventListener('load', async () => {
+	
+	if(navigator.serviceWorker){
+		try{
+			await navigator.serviceWorker.register('./sw.js')
+		}catch (e){
+			console.log('service-worker register failed')
+		}
+	}
+	
 	await loadPosts()
 })
 
