@@ -1,4 +1,35 @@
-body{
+body, header, nav{
     background-color: #282c34;
     color: aliceblue;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    border-radius: 10px;
+    border: azure 1px solid;
+    padding: 10px;
+    margin: 5px;
+}
+
+.card-title{
+    color: darksalmon;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+header{
+    background-color: burlywood;
+    width: 100vw;
+    color: #282c34;
+    height: 40px;
+}
+
+nav{
+    color: darksalmon;
+    height: 50px;
+    width: 100vw;
 }
