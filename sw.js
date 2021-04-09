@@ -17,5 +17,12 @@ self.addEventListener('activate', ()=>{
 })
 
 self.addEventListener('fetch', event=>{
-	console.log('Fetch', event.request.url)
+	//console.log('Fetch', event.request.url)
+	event.respondWith(cacheFirst(event.request))
 })
+
+
+const cacheFirst = async (request)=>{
+	const cached = await caches.match(request)
+	return  cached ?? await fetch(request)
+}
